@@ -24,6 +24,11 @@ export PATH=$HOME/.cask/bin:$PATH
 
 cd ~/.emacs.d
 cask install
+if [[ ! -e ~/.emacs.d/snippets ]]
+then
+echo "creating snippets directory"
+    mkdir ~/.emacs.d/snippets
+fi
 
 # For Python / ELPY
 # Prerequisite: Install Python as per:
